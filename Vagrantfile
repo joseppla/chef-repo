@@ -10,8 +10,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_client do |chef|
     chef.provisioning_path = "/home/joseppla/repojpla/chef-repo/.chef"
     chef.chef_server_url = "https://api.opscode.com/organizations/platest"
-    chef.validation_key_path = "/home/joseppla/repojpla/chef-repo/.chef/joseppla.pem"
-    chef.validation_client_name = "platest"
-    chef.node_name = "server"
+    chef.validation_key_path = "/home/joseppla/repojpla/chef-repo/.chef/platest-validator.pem"
+    chef.validation_client_name = "platest-validator"
+    chef.node_name = "client1"
   end
 end 
